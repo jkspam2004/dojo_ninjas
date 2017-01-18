@@ -1,0 +1,107 @@
+
+  <div class="container">
+
+    <h2>Update profile</h2>
+    <div ng-if="error">
+      <p>{{ error.message }}:</p>
+      <ul>
+        <li ng-repeat="e in error.errors">{{e.message}}</li>
+      </ul>
+    </div>
+
+    <div>
+      <form id="editForm">
+      <p>
+        <label for="first_name">First Name</label>
+        <input id="first_name" name="first_name" type="text" ng-model="editProfile.first_name" />
+      </p>
+      <p>
+        <label for="last_name">Last Name</label>
+        <input id="last_name" name="last_name" type="text" ng-model="editProfile.last_name" />
+      </p>
+      <p>
+        <label for="status">Ninja Status</label>
+        <input id="status" name="status" type="text" ng-model="editProfile.status" />
+      </p>
+      <p>
+        <label for="email">Email</label>
+        <input id="email" name="email" type="text" ng-model="editProfile.email" />
+      </p>
+      <p>
+        <label for="password">Password</label>
+        <input id="password" name="email" type="password" ng-model="editProfile.password" />
+      </p>
+      <p>
+        <label for="confirm_password">Confirm Password</label>
+        <input id="confirm_password" name="email" type="password" ng-model="editProfile.confirm_password" />
+      </p>
+      <p>
+        <!-- TODO: put this into a table? -->
+        <label for="campus">Campus</label>
+        <select name="campus" ng-model="editProfile.campus">
+          <option value="Seattle">Seattle</option>
+          <option value="San Jose">San Jose</option>
+          <option value="Los Angeles">Los Angeles</option>
+          <option value="Dallas">Dallas</option>
+          <option value="Washington D.C.">Washington D.C.</option>
+          <option value="Chicago">Chicago</option>
+        </select>
+      </p>
+      <p>
+        <!-- TODO: make this a month and year drop down, starting in year 2010 -->  
+        <label for="cohort">Cohort</label>
+        <select name="cohort" ng-model="editProfile.cohort">
+          <option value="Feb 2016">Feb 2016</option>
+          <option value="Mar 2016">Mar 2016</option>
+          <option value="Apr 2016">Apr 2016</option>
+          <option value="May 2016">May 2016</option>
+          <option value="Jun 2016">Jun 2016</option>
+          <option value="Jul 2016">Jul 2016</option>
+          <option value="Aug 2016">Aug 2016</option>
+          <option value="Sep 2016">Sep 2016</option>
+          <option value="Oct 2016">Oct 2016</option>
+        </select>    
+      </p>
+      <p>
+        <label for="role">Current Role</label>
+        <select name="role" ng-model="editProfile.role">
+          <option value="staff">Staff</option>
+          <option value="student">Student</option>
+          <option value="alumni">Alumni</option>
+        </select>
+      </p>
+      <p>
+        <label for="job_status">Job Status</label>
+        <select name="job_status" ng-model="editProfile.job_status">
+          <option value="prepping">Prepping</option>
+          <option value="interviewing">Interviewing</option>
+          <option value="employed">Employed</option>
+        </select>
+      </p>
+      <p>
+        <label for="linkedin_site">LinkedIn Site</label>
+        <input id="linkedin_site" name="linkedin_site" type="text" ng-model="editProfile.linkedin_site" />
+      </p>
+      <p>
+        <label for="github_site">Github Site</label>
+        <input id="github_site" name="github_site" type="text" ng-model="editProfile.github_site" />
+      </p>
+      <p>
+        <label for="github_site">Portfolio Site</label>
+        <input id="github_site" name="github_site" type="text" ng-model="editProfile.github_site" />
+      </p>
+      <p>
+        <label for="avatar">Avatar</label> 
+        <input id="avatar" name="avatar" type='file' ng-model="editProfile.avatar" base-sixty-four-input />
+      </p>
+
+      <p>
+        <button ng-click="update()">Update</button>
+      </p>
+
+      </form>
+    </div>
+
+
+  </div>
+

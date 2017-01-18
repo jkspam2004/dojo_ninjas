@@ -1,0 +1,40 @@
+  <div class="container">
+
+    <h3>Discussion Board</h3>
+
+    <p><a href="#/topics/new">Add a Topic</a></p>
+
+    <p>Search <input type="text" ng-model="search.topic" /></p>
+    <table class="table table-hover">
+      <tr>
+        <th>Topic</th>
+        <th>Comments</th>
+        <th>Posted By</th>
+        <th>Created</th>
+        <th>Action</th>
+      </tr>
+      <tr ng-repeat="topic in topics | filter:search:strict">
+        <td>{{ topic.topic }}</td>
+        <td>{{ topic.comments.length }}</td>
+        <td>{{ topic._poster.first_name }}</td>
+        <td>{{ topic.createdAt | date }}</td>
+        <td>
+          <a href="#/topics/{{ topic._id }}">Show</a>
+          <a href="#/topics/{{ topic._id}}/new_comment">Comment</a>
+        </td>
+      </tr>
+    </table>
+    <br/>
+    <br/>
+    <p>Category:</p>
+    <select ng-model="category">
+      <option value="algorithms" selected="selected" ng-init="0">Algorithms</option>
+      <option value="food">Food</option>
+      <option value="sports">Sports</option>
+      <option value="jobs">Jobs</option>
+      <option value="life">Life</option>
+    </select>
+  </div>
+
+
+

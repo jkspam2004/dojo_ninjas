@@ -1,0 +1,51 @@
+
+
+<div id="newTopic" class="container-fluid">
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <ul class="nav navbar-nav">
+          <li><a href="#/events">Events</a></li>
+          <li><a href="#/chatroom">Chat Room</a></li>
+          <li><a href="#/dashboard">Discussion Board</a></li>
+          <li><a href="#/resources">Resources</a></li>
+          <li><a href="#/gallery">Gallery</a></li>
+          <li><a href="#/messages">Messages</a></li>
+          <li><a href="#/ninjadex">Ninja Dex</a></li>
+          <li><a href="#/profile">Profile</a></li>
+          <li><a href="#/logout">Logout</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+
+    <h3>New Topic</h3>
+
+    <div ng-if="error">
+      <p style="color: red">{{ error.message }}</p>
+      <ul>
+        <li style="color: red" ng-repeat="e in error.errors">{{e.message}}</li>
+      </ul>
+    </div>
+
+
+    <form id="newTopicForm">
+      <p>Topic:</p>
+      <textarea ng-model="newTopic.topic"></textarea>
+      <p>Category:</p>
+      <select ng-model="newTopic.category">
+        <option value="algorithms">Algorithms</option>
+        <option value="food">Food</option>
+        <option value="sports">Sports</option>
+        <option value="jobs">Jobs</option>
+        <option value="life">Life</option>
+      </select>
+      <button type="submit" ng-click="addTopic()">Submit</button>
+    </form>
+  </div>
+
+</div>
+
+

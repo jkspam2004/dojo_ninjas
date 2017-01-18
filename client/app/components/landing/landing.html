@@ -1,0 +1,27 @@
+<!-- landing.html -->
+<div id="landing" class="container">
+    <div class="well text-center">
+        <h3><strong>Welcome to Dojo Ninjas<span ng-if="vm.currentUser">, {{ vm.currentUser.currentUserEmail }}</span></strong></h3>
+        <p>Locate and connect with your cohort mates from the dojo</p>
+
+        <p ng-switch="vm.currentUser">
+            <a class="btn btn-primary btn-large" ng-switch-when=false href="#/login">Start</a>
+            <a class="btn btn-primary btn-large" ng-switch-default href="#/events">Start</a>
+        </p>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4">
+            <h5 class='blurb'><strong>Manage Users</strong></h5>
+            <p>Using this application, you'll learn how to add, remove, and edit users for the application.</p>
+        </div>
+        <div class="col-md-4">
+            <h5><strong>Leave Messages</strong></h5>
+            <p>Users will be able to leave a message to another user using this application</p>
+        </div>
+        <div class="col-md-4">
+            <h5><strong>Edit User Information</strong></h5>
+            <p>Admins will be able to edit another user's information (email address, first name, last name, etc)</p>
+        </div>
+    </div> 
+</div>

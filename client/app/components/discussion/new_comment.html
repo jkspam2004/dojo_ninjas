@@ -1,0 +1,47 @@
+
+
+<div id="newComment" class="container-fluid">
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <ul class="nav navbar-nav">
+          <li><a href="#/events">Events</a></li>
+          <li><a href="#/chatroom">Chat Room</a></li>
+          <li><a href="#/dashboard">Discussion Board</a></li>
+          <li><a href="#/resources">Resources</a></li>
+          <li><a href="#/gallery">Gallery</a></li>
+          <li><a href="#/messages">Messages</a></li>
+          <li><a href="#/ninjadex">Ninja Dex</a></li>
+          <li><a href="#/profile">Profile</a></li>
+          <li><a href="#/logout">Logout</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+
+
+    <h3>{{ topic.topic }}</h3>
+    <p>{{ topic.category }}</p>
+    <p>Asked by {{ topic._poster.first_name }}</p>
+
+    <div ng-if="error">
+      <p style="color: red">{{ error.message }}</p>
+      <ul>
+        <li style="color: red" ng-repeat="e in error.errors">{{e.message}}</li>
+      </ul>
+    </div>
+
+    <form id="commentForm">
+      <p>Your Comment:</p>
+      <textarea ng-model="newComment.comment"></textarea>
+      <p>
+        <button type="cancel" ng-click="cancelComment()">Cancel</button>
+        <button type="submit" ng-click="addComment()">Submit</button>
+      </p>
+
+    </form>
+  </div>
+
+</div>

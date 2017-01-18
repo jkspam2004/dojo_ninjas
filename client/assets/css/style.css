@@ -1,0 +1,9 @@
+.mynav {
+    opacity: 0.8;
+}
+body {
+    padding-top: 70px;
+}
+.dropdown-1 {
+    cursor: pointer;
+}

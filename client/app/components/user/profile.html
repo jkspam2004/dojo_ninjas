@@ -1,0 +1,22 @@
+  <div class="container">
+
+    <h2>My profile</h2>
+    <a href="#/ninjas/{{ ninja_self._id }}/edit">Update profile</a>
+    <div id="self_detail">
+      <ul style="list-style: none"> 
+        <li>Name: {{ ninja_self.first_name }} {{ ninja_self.last_name }}</li>
+        <li>Ninja Status: {{ ninja_self.status }}</li>
+        <li ng-if="ninja_self.avatar">
+          <img data-ng-src="{{'data:image/jpg;base64,'+ ninja_self.avatar}}" width="20%" height="20%">
+        </li>
+        <li>Campus: {{ ninja_self.campus }}</li>
+        <li>Cohort: {{ ninja_self.cohort }}</li>
+        <li>Role: {{ ninja_self.role }}</li>
+        <li>Job Status: {{ ninja_self.job_status }}</li>
+        <li>LinkedIn Site: {{ ninja_self.linkedin_site }}</li>
+        <li>Github Site: {{ ninja_self.github_site }}</li>
+        <li>Portfolio Site: {{ ninja_self.portfolio_site }}</li>
+      </ul>
+    </div>
+
+  </div>

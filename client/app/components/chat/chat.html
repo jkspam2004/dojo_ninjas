@@ -1,0 +1,41 @@
+<div class="container-fluid" ng-style="{'background-image':'url(/assets/img/dojo.jpg' + ')', 'height': '900px'}">
+    <h2 style="color:white;">Chatroom</h2>
+
+    <div style="height:400px;">
+        <div id="controls" style="height:400px; display: inline-block; width:20%; float:left; background-color:lightyellow;">
+            <h3>Rooms</h3>
+            <div ng-repeat="room in rooms"> 
+                <input id="room.room" type="checkbox" ng-model="room.joined" ng-change="change(room)" />
+                <span ng-click="setRoom(room)" style="text-decoration: underline"> {{ room.room }}</span><br/><br/>
+            </div>
+
+            <div>
+                <input id="newRoom" type="text" ng-model="newRoom.room"/ >
+                <button ng-click="addRoom()">Add Room</button>
+            </div>
+        </div> <!-- /div#controls -->
+
+
+        <div id="stream" style="height:400px; display: inline-block; width:60%; background-color:white; overflow:auto;">
+            <h3>Messages</h3>
+            <div id="messages" style="overflow:auto;" ng-if="messages">{{ messages }}</div>
+            <div style="vertical-align: bottom; height: 70px">
+                <label for="postMessage">Message:</label><br/>
+                <textarea id="postMessage" style="width:80%; height:50px;" ng-model="newMessage"></textarea>
+                <br/><br/>
+                <button id="postBtn" ng-click="post()" />Post Message</button>
+            </div>
+      </div> <!-- /div#stream -->
+
+      <div id="post" style="height:400px; display: inline-block; width:20%; float:right; background-color:#eee;">
+          <h3>Users</h3>
+          <div ng-if="showRoom.users">
+              Room: {{ showRoom.room }}
+              <ul ng-repeat="(user,data) in showRoom.users"> 
+                  <li>{{ user }}</li>
+              </ul>
+          </div>
+      </div> <!-- /div#post -->
+
+    </div> <!-- /div style -->
+</div> <!-- /div.container-fluid -->

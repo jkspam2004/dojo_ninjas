@@ -1,0 +1,51 @@
+
+<div id="dashboard" class="container-fluid">
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <ul class="nav navbar-nav">
+          <li><a href="#/events">Events</a></li>
+          <li><a href="#/chatroom">Chat Room</a></li>
+          <li><a href="#/dashboard">Discussion Board</a></li>
+          <li><a href="#/resources">Resources</a></li>
+          <li><a href="#/gallery">Gallery</a></li>
+          <li><a href="#/messages">Messages</a></li>
+          <li><a href="#/ninjadex">Ninja Dex</a></li>
+          <li><a href="#/profile">Profile</a></li>
+          <li><a href="#/logout">Logout</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+
+    <h3>Gallery</h3>
+
+    <img src="./static/images/xlb.jpg" width="40%" height="30%">
+    <img src="./static/images/bfs.jpg" width="40%" height="30%">
+    <img src="./static/images/bootcamp1.jpg" width="40%" height="30%">
+    <img src="./static/images/bootcamp2.jpg" width="40%" height="30%">
+    <img src="./static/images/bootcamp3.jpg" width="40%" height="30%">
+    <img src="./static/images/bootcamp4.jpg" width="40%" height="30%">
+    <img src="./static/images/bootcamp5.jpg" width="40%" height="30%">
+    <img src="./static/images/bootcamp6.jpg" width="40%" height="30%">
+    <img src="./static/images/bootcamp7.jpg" width="40%" height="30%">
+    <img src="./static/images/bootcamp8.jpg" width="40%" height="30%">
+    <img src="./static/images/bootcamp9.jpg" width="40%" height="30%">
+    <img src="./static/images/bootcamp10.jpg" width="40%" height="30%">
+    <img src="./static/images/bootcamp11.jpg" width="40%" height="30%">
+<!--
+    <img data-ng-src="{{'data:image/jpg;base64,'+ndividual.image}}" width="30%" height="auto">    
+-->
+
+    <div ng-repeat="image in gallery">
+    </div>
+
+    <form>
+    <p>Upload an image:  <input type='file' ng-model='newGallery.image' base-sixty-four-input></p>
+    <input type="submit" value="Submit">
+    </form>
+
+  </div>
+</div>

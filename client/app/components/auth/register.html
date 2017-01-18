@@ -1,0 +1,101 @@
+<div id="register" class="container">
+    <h3>Register</h3>
+
+    <div ng-if="vm.error">
+        <p class="bg-danger">{{ vm.error.message }}</p>
+        <ul class="text-danger">
+            <li ng-repeat="mesg in vm.error.errors">{{ mesg }}</li>
+        </ul>
+    </div>
+
+    <form id="registerForm" class="form-horizontal">
+        <div class="form-group">
+            <label for="first_name" class="control-label col-md-2">First Name</label>
+            <div class="col-md-4">
+                <input id="first_name" name="first_name" type="text" ng-model="vm.first_name" placeholder="First Name" class="form-control"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="last_name" class="control-label col-md-2">Last Name</label>
+            <div class="col-md-4">
+                <input id="last_name" name="last_name" type="text" ng-model="vm.last_name" placeholder="Last Name" class="form-control"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="email" class="control-label col-md-2">Email</label>
+            <div class="col-md-4">
+                <input id="email" name="email" type="text" ng-model="vm.email" placeholder="Email" class="form-control"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="password" class="control-label col-md-2">Password</label>
+            <div class="col-md-4">
+                <input id="password" name="email" type="password" ng-model="vm.password" placeholder="Password" class="form-control"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="confirm_password" class="control-label col-md-2">Confirm Password</label>
+            <div class="col-md-4">
+                <input id="confirm_password" name="email" type="password" ng-model="vm.confirm_password" placeholder="Confirm Password" class="form-control"/>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="campus" class="control-label col-md-2">Campus</label>
+            <div class="col-md-4">
+                <select name="campus" ng-model="vm.campus" class="form-control">
+                    <option value="Seattle">Seattle</option>
+                    <option value="San Jose">San Jose</option>
+                    <option value="Los Angeles">Los Angeles</option>
+                    <option value="Dallas">Dallas</option>
+                    <option value="Washington D.C.">Washington D.C.</option>
+                    <option value="Chicago">Chicago</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="cohort" class="control-label col-md-2">Cohort</label>
+            <div class="col-md-4">
+                <select name="cohort" ng-model="vm.cohort" class="form-control">
+                    <option value="Feb 2016">Feb 2016</option>
+                    <option value="Mar 2016">Mar 2016</option>
+                    <option value="Apr 2016">Apr 2016</option>
+                    <option value="May 2016">May 2016</option>
+                    <option value="Jun 2016">Jun 2016</option>
+                    <option value="Jul 2016">Jul 2016</option>
+                    <option value="Aug 2016">Aug 2016</option>
+                    <option value="Sep 2016">Sep 2016</option>
+                    <option value="Oct 2016">Oct 2016</option>
+                </select>    
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="role" class="control-label col-md-2">Current Role</label>
+            <div class="col-md-4">
+                <select name="role" ng-model="vm.role" class="form-control">
+                    <option value="staff">Staff</option>
+                    <option value="student">Student</option>
+                    <option value="alumni">Alumni</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="job_status" class="control-label col-md-2">Job Status</label>
+            <div class="col-md-4">
+                <select name="job_status" ng-model="vm.job_status" class="form-control">
+                    <option value="prepping">Prepping</option>
+                    <option value="interviewing">Interviewing</option>
+                    <option value="employed">Employed</option>
+                </select>
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            <div class="col-md-4 col-md-offset-2">
+                <button class="btn btn-default" ng-click="vm.register()">Register</button>
+                <a class="btn btn-link" href="#/login">Already have an account? Login</a>
+            </div>
+        </div>
+    </form>
+</div>

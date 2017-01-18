@@ -1,0 +1,45 @@
+  <div class="container">
+    <ul id="cohorts" style="list-style: none"  ng-repeat="cohort in cohorts">
+      <li ng-click="expand(cohort)">{{ cohort.cohort }} - {{ cohort.ninjas.length }} ninjas</li>
+      <ul ng-if="cohort.show" ng-repeat="ninja in cohort.ninjas">
+        <li class="ninja" ng-click="showNinja(ninja)">{{ ninja.first_name }}
+        <div ng-if="ninja.avatar">
+          <img data-ng-src="{{'data:image/jpg;base64,'+ ninja.avatar}}" width="60%" height="60%">
+        </div>
+        </li>
+      </ul>
+    </ul>
+
+    <!-- <div id="ninja_detail" ng-if="ninja.show" ng-repeat="(key, value) in ninja"> -->
+    <div id="ninja_detail" ng-if="ninja.show">
+      <ul style="list-style: none"> 
+        <li>{{ ninja.first_name }} {{ ninja.last_name }}</li>
+        <li>Ninja Status: {{ ninja.status }}</li>
+        <li ng-if="ninja.avatar">
+          <img data-ng-src="{{'data:image/jpg;base64,'+ ninja.avatar}}" width="20%" height="20%">
+        </li>
+        <li>Campus: {{ ninja.campus }}</li>
+        <li>Cohort: {{ ninja.cohort }}</li>
+        <li>Role: {{ ninja.role }}</li>
+        <li>Job Status: {{ ninja.job_status }}</li>
+        <li>LinkedIn Site: {{ ninja.linkedin_site }}</li>
+        <li>Github Site: {{ ninja.github_site }}</li>
+        <li>Portfolio Site: {{ ninja.portfolio_site }}</li>
+
+      </ul>
+    </div>
+
+  </div>
+
+<style>
+  .ninja {
+    width: 100px;
+    height: 100px;
+    border: 1px solid #eee;
+    display: inline-block;
+    vertical-align: top;
+  }
+ 
+</style>
+
+

@@ -1,0 +1,24 @@
+adapter rooms { 
+  '/#MKCZibkgFARaBiRKAAAB': Room { 
+    sockets: { '/#MKCZibkgFARaBiRKAAAB': true }, length: 1 
+  },
+  general: Room { 
+    sockets:
+      { '/#MKCZibkgFARaBiRKAAAB': true,
+        '/#L-0q8eA5v6Hlu1KCAAAC': true 
+      }, 
+      length: 2 
+  },
+  'Mar 2016': Room { 
+    sockets: { '/#MKCZibkgFARaBiRKAAAB': true }, 
+    length: 1 
+   },
+  '/#L-0q8eA5v6Hlu1KCAAAC': Room { 
+    sockets: { '/#L-0q8eA5v6Hlu1KCAAAC': true }, length: 1 
+  },
+  'Feb 2016': Room { 
+    sockets: { '/#L-0q8eA5v6Hlu1KCAAAC': true }, length: 1 
+  } 
+}
+
+

@@ -1,0 +1,23 @@
+{
+  "name": "dojo_ninjas",
+  "description": "",
+  "main": "server.js",
+  "authors": [
+    "jkspam2004 <jkspam2004@yahoo.com>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.8",
+    "angular-route": "^1.5.8",
+    "angular-base64-upload": "^0.1.19",
+    "angular-messages": "^1.6.1"
+  }
+}

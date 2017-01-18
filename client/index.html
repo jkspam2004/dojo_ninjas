@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="end">
+<head>
+    <!-- Meta information -->
+    <title>Dojo Ninjas</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="Dojo Ninjas">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Vendor: Bootstrap Stylesheets http://getbootstrap.com -->
+    <link rel="stylesheet" href="assets/css/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/bootstrap/bootstrap-theme.min.css" />
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" />
+
+    <!-- Our website CSS style -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="icon" type="image/x-icon" href="assets/img/green_ninja.png" />
+</head>
+
+<body ng-app="app">
+
+    <!-- Our Website Content Goes Here -->
+    <div ng-controller="HeaderController as header">
+        <div ng-include="header.templateUrl"></div>
+    </div>
+    <div ng-view=""><!-- partials loaded here --></div>
+    <div ng-include='"app/components/core/footer/footer.html"'></div>
+
+    <!-- Vendor: Javascripts -->
+    <script src="assets/libs/jquery.min.js" defer></script>
+    <script src="assets/libs/bootstrap.min.js" defer></script>
+
+    <!-- Vendor: Angular, followed by our custom Javascripts -->
+    <script src="assets/bower_components/angular/angular.min.js" charset="utf-8" defer></script>
+    <script src="assets/bower_components/angular-route/angular-route.min.js" charset="utf-8" defer></script>
+    <script src="assets/bower_components/angular-messages/angular-messages.min.js" charset="utf-8" defer></script>
+    <script src="assets/bower_components/angular-base64-upload/src/angular-base64-upload.js" charset="utf-8" defer></script>
+    <script src="socket.io/socket.io.js" charset="utf-8" defer></script>
+
+    <!-- Our Website Javascripts -->
+
+    <!-- Angular app files -->
+    <script src="app/app.module.js" charset="utf-8" defer></script>
+    <script src="app/app.routes.js" charset="utf-8" defer></script>
+
+    <!-- header and landing page -->
+    <script src="app/components/landing/landing.controller.js" charset="utf-8" defer></script>
+    <script src="app/components/core/header/header.controller.js" charset="utf-8" defer></script>
+
+    <!-- auth/login -->
+    <script src="app/components/auth/auth.factory.js" charset="utf-8" defer></script>
+    <script src="app/components/auth/login.controller.js" charset="utf-8" defer></script>
+    <script src="app/components/auth/logout.controller.js" charset="utf-8" defer></script>
+    <script src="app/components/auth/register.controller.js" charset="utf-8" defer></script>
+
+    <!-- events -->
+    <script src="app/components/event/event.controller.js" charset="utf-8" defer></script>
+
+    <!-- chatroom -->
+    <script src="app/components/chat/chat.factory.js" charset="utf-8" defer></script>
+    <script src="app/components/chat/chat.controller.js" charset="utf-8" defer></script>
+
+    <!-- discussions -->
+    <script src="app/components/discussion/discussionFactory.js" charset="utf-8" defer></script>
+    <script src="app/components/discussion/dashboardController.js" charset="utf-8" defer></script>
+
+    <!-- profile -->
+    <script src="app/components/user/user.factory.js" charset="utf-8" defer></script>
+    <script src="app/components/user/ninjadex.controller.js" charset="utf-8" defer></script>
+    <script src="app/components/user/profile.controller.js" charset="utf-8" defer></script>
+    <script src="app/components/user/editUser.controller.js" charset="utf-8" defer></script>
+
+    <!-- comments -->
+<!--
+    <script src="app/components/discussion/newTopicController.js" charset="utf-8" defer></script>
+    <script src="app/components/discussion/showTopicController.js" charset="utf-8" defer></script>
+    <script src="app/components/newCommentController.js" charset="utf-8" defer></script>
+-->
+    <!-- gallery -->
+<!--
+    <script src="app/components/gallery/gallery.factory.js" charset="utf-8" defer></script>
+    <script src="app/components/gallery/gallery.controller.js" charset="utf-8" defer></script>
+-->
+
+    <!-- angular style guide: https://github.com/johnpapa/angular-styleguide -->
+</body>
+</html>
